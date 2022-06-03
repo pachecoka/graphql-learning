@@ -19,7 +19,8 @@
 
 	<properties>
 		<java.version>11</java.version>
-		<graphql-version>11.0.0</graphql-version>
+		<graphql-version>11.1.0</graphql-version>
+		<graphql-java-extended-scalars-version>18.1</graphql-java-extended-scalars-version>
 	</properties>
 
 	<dependencies>
@@ -33,6 +34,19 @@
 			<artifactId>graphql-spring-boot-starter</artifactId>
 			<version>${graphql-version}</version>
 		</dependency>
+
+		<dependency>
+			<groupId>com.graphql-java</groupId>
+			<artifactId>graphql-java-extended-scalars</artifactId>
+			<version>${graphql-java-extended-scalars-version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>com.graphql-java</groupId>
+					<artifactId>graphql-java</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
 
 		<dependency>
 			<groupId>com.graphql-java-kickstart</groupId>

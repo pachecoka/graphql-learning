@@ -22,6 +22,7 @@ public class BankAccountMutation implements GraphQLMutationResolver {
                 .currency(USD)
                 .client(Client.builder()
                         .firstName(input.getFirstName())
+                        .age(input.getAge())
                         .build())
                 .build();
     }
