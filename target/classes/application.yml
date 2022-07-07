@@ -1,4 +1,4 @@
 graphql:
   servlet:
     exception-handlers-enabled: true
-  extended-scalars: NonNegativeInt
+  extended-scalars: NonNegativeInt, DateTime, Date
