@@ -1,0 +1,12 @@
+{
+    bankAccount (id: "6de9f483-38f3-4eb7-a9b5-d8743ada2433"){
+        client {
+            firstName,
+            lastName
+        },
+        id,
+        currency,
+        createdAt,
+        createdOn
+    }
+}

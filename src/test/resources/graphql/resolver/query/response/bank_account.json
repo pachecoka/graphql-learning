@@ -1,0 +1,14 @@
+{
+  "data": {
+    "bankAccount": {
+      "client": {
+        "firstName": "Karolina",
+        "lastName": "Pacheco"
+      },
+      "id": "6de9f483-38f3-4eb7-a9b5-d8743ada2433",
+      "currency": "USD",
+      "createdAt": "2020-10-17T00:00:00.000Z",
+      "createdOn": "2020-10-17"
+    }
+  }
+}
