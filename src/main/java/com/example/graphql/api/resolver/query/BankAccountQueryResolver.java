@@ -25,7 +25,7 @@ import static java.util.stream.Collectors.toUnmodifiableList;
 @Slf4j
 @Component
 @RequiredArgsConstructor
-public class BankAccountResolver implements GraphQLQueryResolver {
+public class BankAccountQueryResolver implements GraphQLQueryResolver {
 
     private final Clock clock;
     private final BankAccountRepository bankAccountRepository;
