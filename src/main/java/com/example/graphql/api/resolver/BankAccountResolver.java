@@ -21,6 +21,6 @@ public class BankAccountResolver implements GraphQLResolver<BankAccount> {
     public CompletableFuture<BigDecimal> balance(BankAccount bankAccount, DataFetchingEnvironment environment) {
         log.info("Getting balance for {}", bankAccount.getId());
         DataLoader<UUID, BigDecimal> dataLoader = environment.getDataLoader(BALANCE_DATA_LOADER);
-        return dataLoader.load(bankAccount.getId());
+        return dataLoader.load(bankAccount.getId(), bankAccount);
     }
 }

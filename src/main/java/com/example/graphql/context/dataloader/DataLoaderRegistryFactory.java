@@ -2,11 +2,13 @@ package com.example.graphql.context.dataloader;
 
 import com.example.graphql.service.BalanceService;
 import lombok.RequiredArgsConstructor;
+import org.dataloader.BatchLoaderEnvironment;
 import org.dataloader.DataLoader;
 import org.dataloader.DataLoaderRegistry;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
+import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
@@ -32,10 +34,11 @@ public class DataLoaderRegistryFactory {
         return registry;
     }
 
+    @SuppressWarnings({"unchecked", "rawtypes"})
     private DataLoader<UUID, BigDecimal> createBalanceDataLoader(String userId) {
-        return DataLoader.newMappedDataLoader((Set<UUID> bankAccountIds) ->
+        return DataLoader.newMappedDataLoader((bankAccountIds, environment) ->
                 CompletableFuture.supplyAsync(() ->
-                                balanceService.getBalanceFor(bankAccountIds, userId),
+                                balanceService.getBalanceFor((Map)environment.getKeyContexts(), userId),
                         balanceThreadPool));
     }
 }
