@@ -27,13 +27,18 @@ public class BankAccountMutation implements GraphQLMutationResolver {
 
     public BankAccount createBankAccount(@Valid CreateBankAccountInput input) {
         log.info("Creating bank account for {}", input);
+        return createBankAccount();
+    }
+
+    public BankAccount updateBankAccount(UUID id, String name, int age) {
+        log.info("Updating bank account for {}. Name: {}, age: {}", id, name, age);
+        return createBankAccount();
+    }
+
+    private BankAccount createBankAccount() {
         return BankAccount.builder()
                 .id(UUID.randomUUID())
                 .currency(USD)
-                .client(Client.builder()
-                        .firstName(input.getFirstName())
-                        .age(input.getAge())
-                        .build())
                 .createdOn(LocalDate.now(clock))
                 .createdAt(ZonedDateTime.now(clock))
                 .build();

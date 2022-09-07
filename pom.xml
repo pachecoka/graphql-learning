@@ -19,8 +19,9 @@
 
 	<properties>
 		<java.version>11</java.version>
-		<graphql-version>11.1.0</graphql-version>
+		<graphql-version>12.0.0</graphql-version>
 		<graphql-java-extended-scalars-version>18.1</graphql-java-extended-scalars-version>
+		<graphql.extended.validation.version>16.0.0</graphql.extended.validation.version>
 	</properties>
 
 	<dependencies>
@@ -47,18 +48,29 @@
 			</exclusions>
 		</dependency>
 
-
 		<dependency>
-			<groupId>com.graphql-java-kickstart</groupId>
-			<artifactId>playground-spring-boot-starter</artifactId>
-			<version>${graphql-version}</version>
+			<groupId>com.graphql-java</groupId>
+			<artifactId>graphql-java-extended-validation</artifactId>
+			<version>${graphql.extended.validation.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>com.graphql-java</groupId>
+					<artifactId>graphql-java</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 
-		<dependency>
-			<groupId>com.graphql-java-kickstart</groupId>
-			<artifactId>voyager-spring-boot-starter</artifactId>
-			<version>${graphql-version}</version>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>com.graphql-java-kickstart</groupId>-->
+<!--			<artifactId>playground-spring-boot-starter</artifactId>-->
+<!--			<version>${graphql-version}</version>-->
+<!--		</dependency>-->
+
+<!--		<dependency>-->
+<!--			<groupId>com.graphql-java-kickstart</groupId>-->
+<!--			<artifactId>voyager-spring-boot-starter</artifactId>-->
+<!--			<version>${graphql-version}</version>-->
+<!--		</dependency>-->
 
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -69,6 +81,7 @@
 		<dependency>
 			<groupId>org.hibernate.validator</groupId>
 			<artifactId>hibernate-validator</artifactId>
+			<version>6.1.6.Final</version>
 		</dependency>
 
 		<dependency>
