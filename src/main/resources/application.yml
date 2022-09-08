@@ -1,8 +1,12 @@
 graphql:
   servlet:
+    maxQueryDepth: 100
     exception-handlers-enabled: true
-#    tracingEnabled: true
+  playground:
+    enabled: true
   extended-scalars: NonNegativeInt, DateTime, Date
+voyager:
+  enabled: true
 
 logging:
   pattern:
