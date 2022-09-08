@@ -1,6 +1,5 @@
-package com.example.graphql.api.resolver;
+package com.example.graphql.api.resolver.attributequery;
 
-import com.example.graphql.context.dataloader.DataLoaderRegistryFactory;
 import com.example.graphql.domain.bank.BankAccount;
 import graphql.kickstart.tools.GraphQLResolver;
 import graphql.schema.DataFetchingEnvironment;
@@ -16,7 +15,7 @@ import static com.example.graphql.context.dataloader.DataLoaderRegistryFactory.B
 
 @Slf4j
 @Component
-public class BankAccountResolver implements GraphQLResolver<BankAccount> {
+public class BalanceResolver implements GraphQLResolver<BankAccount> {
 
     public CompletableFuture<BigDecimal> balance(BankAccount bankAccount, DataFetchingEnvironment environment) {
         log.info("Getting balance for {}", bankAccount.getId());

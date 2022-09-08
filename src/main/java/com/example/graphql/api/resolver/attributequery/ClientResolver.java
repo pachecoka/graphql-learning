@@ -1,8 +1,7 @@
-package com.example.graphql.api.resolver;
+package com.example.graphql.api.resolver.attributequery;
 
 import com.example.graphql.domain.bank.BankAccount;
 import com.example.graphql.domain.bank.Client;
-import graphql.GraphQLException;
 import graphql.kickstart.tools.GraphQLResolver;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
