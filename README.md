@@ -13,7 +13,7 @@ be accessed by doing the following:
 [Data Fetching Documentation](https://www.graphql-java.com/documentation/data-fetching)
 
 ## References
-[Spring Boot GraphQL Tutorial - Full Course](https://www.youtube.com/playlist?list=PLiwhu8iLxKwL1TU0RMM6z7TtkyW-3-5Wi)
+[Spring Boot GraphQL Tutorial - Full Course](https://www.youtube.com/playlist?list=PLiwhu8iLxKwL1TU0RMM6z7TtkyW-3-5Wi) 
 [Directive Validation](https://github.com/graphql-java/graphql-java-extended-validation)
 
 
